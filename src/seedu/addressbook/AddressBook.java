@@ -23,7 +23,6 @@ import java.util.Optional;
 import java.util.Scanner;
 import java.util.Set;
 
-
 /*
  * NOTE : =============================================================
  * This class header comment below is brief because details of how to
@@ -211,13 +210,17 @@ public class AddressBook {
         showWelcomeMessage();
         processProgramArgs(args);
         loadDataFromStorage();
-        while (true) {
+        whenTheConditionTrue();
+    }
+
+	private static void whenTheConditionTrue() {
+		while (true) {
             String userCommand = getUserInput();
             echoUserCommand(userCommand);
             String feedback = executeCommand(userCommand);
             showResultToUser(feedback);
         }
-    }
+	}
 
     /*
      * NOTE : =============================================================
